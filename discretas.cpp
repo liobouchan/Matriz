@@ -27,6 +27,20 @@ void imprimir (int **matriz, int tam){
 	} 
 }
 
+bool esSimetrica (int **matriz, int tam){ 
+	
+	for (int i = 0; i < tam; i++){ 
+		for (int j = 0; j < tam; j++){ 
+			if (matriz [i] [j] != matriz [j] [i]){ 
+				return false; 
+			} 
+		} 
+	} 
+
+	return true; 
+} 
+
+
 int main (){ 
 
 	//Estamos declarando e inicializando variables.
@@ -55,5 +69,12 @@ int main (){
 	printf("\n");
 	printf ("Ok Aquí está tu matriz: \n\n"); 
 	imprimir (matriz, tam); 
-	printf ("\n"); 
-}	 
+	printf ("\n");
+
+	if (esSimetrica (matriz, tam)){ 
+		printf ("La matriz es simetrica.\n"); 
+	} 
+	else{
+		printf ("La matriz no es simetrica.\n");
+	}
+}		 
