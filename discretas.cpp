@@ -40,10 +40,22 @@ bool esSimetrica (int **matriz, int tam){
 	return true; 
 } 
 
+int convertir(int **matriz, int uno, int tam){
+
+	for (int i = 0; i < tam; i++){ 
+		for (int j = 0; j < tam; j++){ 
+			if (matriz [i] [j] != 0){ 
+				uno , &matriz [i][j];
+				return false; 
+			} 
+		} 
+	} 	
+}
 
 int main (){ 
 
 	//Estamos declarando e inicializando variables.
+	int uno = 1;
 	int w = 0;
 	int tam = 0;
 
@@ -66,15 +78,19 @@ int main (){
 		} 
 	}
 
+	//Aqui imprimimos la matriz ordenadamente bien
 	printf("\n");
 	printf ("Ok Aquí está tu matriz: \n\n"); 
 	imprimir (matriz, tam); 
 	printf ("\n");
 
+	//Aqui vemos Si la matriz es simetrica
 	if (esSimetrica (matriz, tam)){ 
 		printf ("La matriz es simetrica.\n"); 
 	} 
 	else{
 		printf ("La matriz no es simetrica.\n");
 	}
+
+	//convertir(**matriz, uno, tam);
 }		 
