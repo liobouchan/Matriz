@@ -46,7 +46,7 @@ int convertir(int **matriz, int uno, int tam){
 		for (int j = 0; j < tam; j++){ 
 			if (matriz [i] [j] != 0){ 
 				uno , &matriz [i][j];
-				return false; 
+				return 0; 
 			} 
 		} 
 	} 	
@@ -92,5 +92,25 @@ int main (){
 		printf ("La matriz no es simetrica.\n");
 	}
 
-	//convertir(**matriz, uno, tam);
+	printf("\n");
+	printf("Vamos a convertir tu matriz a 0 y 1  en caso de que se pueda\n");
+
+	//Aqui vamos a convertir los valores 
+	for (int i = 0; i < tam; i++){ 
+		for (int j = 0; j < tam; j++){ 
+			if (matriz [i] [j] != 0 && matriz [i] [j] !=1){
+				printf("\n");
+				printf("Escribe 1 en los siguientes espacios para convertir\n");
+				printf("\n");
+
+				printf ("Fila [%d] Columna [%d]: ", i + 1, j + 1); 
+				scanf("%d" , &matriz [i][j]); 
+			}
+		} 
+	}
+
+	printf("\n");
+	printf ("Gracias, aquí está tu matriz: \n\n"); 
+	imprimir (matriz, tam); 
+	printf ("\n");
 }		 
