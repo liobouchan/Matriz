@@ -81,25 +81,39 @@ int main (){
 		printf ("La matriz no es simetrica.\n");
 	}
 
-	printf("\n");
-	printf("Vamos a convertir tu matriz a 0 y 1  en caso de que se pueda\n");
-
 	//Aqui vamos a convertir los valores 
 	for (int i = 0; i < tam; i++){ 
 		for (int j = 0; j < tam; j++){ 
 			if (matriz [i] [j] != 0 && matriz [i] [j] !=1){
 				printf("\n");
-				printf("Escribe 1 en los siguientes espacios para convertir\n");
+				printf("Vamos a convertir la matriz en 1 y 0\n");
 				printf("\n");
-
-				printf ("Fila [%d] Columna [%d]: ", i + 1, j + 1); 
-				scanf("%d" , &matriz [i][j]); 
+				matriz[i][j] = 1;
 			}
 		} 
 	}
-
+	//Aqui imprimimos la matriz con lo valores convertidos
 	printf("\n");
 	printf ("Gracias, aquí está tu matriz: \n\n"); 
 	imprimir (matriz, tam); 
 	printf ("\n");
-}		 
+
+	//Aqui le estoy diciendo que me lo haga simetrica
+	printf("\n");
+	printf("Haciendola simetrica");
+		for (int i = 0; i < tam; i++){ 
+			for (int j = 0; j < tam; j++){ 
+				if (i == j){
+					printf("\n");
+					matriz[i][j] = 0;
+			}
+		} 
+	}
+
+	//Imprime la matriz con la diagonal de ceros
+	printf("\n");
+	printf ("Gracias, aquí está tu matriz Simetrica: \n\n"); 
+	imprimir (matriz, tam); 
+	printf ("\n");
+
+}
