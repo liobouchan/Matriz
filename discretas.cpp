@@ -40,17 +40,6 @@ bool esSimetrica (int **matriz, int tam){
 	return true; 
 } 
 
-int convertir(int **matriz, int uno, int tam){
-
-	for (int i = 0; i < tam; i++){ 
-		for (int j = 0; j < tam; j++){ 
-			if (matriz [i] [j] != 0){ 
-				uno , &matriz [i][j];
-				return 0; 
-			} 
-		} 
-	} 	
-}
 
 int main (){ 
 
